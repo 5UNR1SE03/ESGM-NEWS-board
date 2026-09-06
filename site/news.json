@@ -1,0 +1,70 @@
+{
+  "generatedAt": "2026-09-03T03:20:00+00:00",
+  "demo": true,
+  "feedsOk": 0,
+  "feedsFailed": 0,
+  "total": 5,
+  "domestic": 2,
+  "international": 3,
+  "topSources": [
+    ["示例数据", 5]
+  ],
+  "categories": {
+    "政策监管": 2,
+    "金融市场": 1,
+    "气候环境": 1,
+    "企业动态": 1
+  },
+  "items": [
+    {
+      "title": "【示例】三部门发布上市公司可持续发展报告披露新指引",
+      "link": "https://example.com/cn-esg-guide",
+      "source": "证券时报",
+      "published": "Wed, 03 Sep 2026 10:30:00 +0800",
+      "pubTs": "2026-09-03T02:30:00+00:00",
+      "region": "dom",
+      "category": "政策监管",
+      "desc": "这是示例数据：监管部门就 ESG 信息披露范围、鉴证要求等作出进一步规范，2027 年起分步实施。"
+    },
+    {
+      "title": "【示例】全国碳市场扩容在即 钢铁水泥行业纳入履约",
+      "link": "https://example.com/carbon-market",
+      "source": "第一财经",
+      "published": "Wed, 03 Sep 2026 09:05:00 +0800",
+      "pubTs": "2026-09-03T01:05:00+00:00",
+      "region": "dom",
+      "category": "气候环境",
+      "desc": "这是示例数据：全国碳排放权交易市场覆盖行业扩围，更多高耗能企业将面临碳配额约束。"
+    },
+    {
+      "title": "【示例】EU Finalizes CSRD Reporting Guidance for SMEs",
+      "link": "https://example.com/eu-csrd",
+      "source": "ESG Today",
+      "published": "Wed, 03 Sep 2026 08:20:00 +0000",
+      "pubTs": "2026-09-03T08:20:00+00:00",
+      "region": "intl",
+      "category": "政策监管",
+      "desc": "Sample data: European Commission publishes final guidance clarifying sustainability reporting obligations for listed SMEs."
+    },
+    {
+      "title": "【示例】Global ESG Fund Flows Return to Net Inflows",
+      "link": "https://example.com/esg-flows",
+      "source": "Reuters",
+      "published": "Tue, 02 Sep 2026 16:40:00 +0000",
+      "pubTs": "2026-09-02T16:40:00+00:00",
+      "region": "intl",
+      "category": "金融市场",
+      "desc": "Sample data: Sustainable funds posted net inflows last month, reversing a multi-month outflow streak, data show."
+    },
+    {
+      "title": "【示例】Tech Giant Commits to 100% Renewable Energy by 2030",
+      "link": "https://example.com/re100",
+      "source": "ESG News",
+      "published": "Mon, 01 Sep 2026 12:00:00 +0000",
+      "pubTs": "2026-09-01T12:00:00+00:00",
+      "region": "intl",
+      "category": "企业动态",
+      "desc": "Sample data: Company announces expanded renewable energy procurement and supply chain decarbonization targets."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ESG 全球新闻台：国内外 ESG 领域最新动态，每日自动更新。">
+<title>ESG 全球新闻台 · 每日更新</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="header-title">
+      <h1>🌿 ESG 全球新闻台</h1>
+      <p class="subtitle">国内外 ESG 领域最新动态 · 每日自动更新</p>
+    </div>
+    <div class="update-box">
+      <span class="update-label">最近更新（北京时间）</span>
+      <span id="updatedAt" class="update-time">加载中…</span>
+    </div>
+  </div>
+</header>
+
+<div id="demoBanner" class="demo-banner hidden">
+  ⚠️ 当前显示的是<b>示例数据</b>。将代码推送到 GitHub 后，首次自动抓取会用真实新闻替换本站内容。
+</div>
+
+<main class="container">
+
+  <section class="controls">
+    <div class="segmented" id="regionTabs" role="tablist" aria-label="新闻地区筛选">
+      <button class="seg-btn active" data-region="all">全部</button>
+      <button class="seg-btn" data-region="dom">🇨🇳 国内</button>
+      <button class="seg-btn" data-region="intl">🌍 国际</button>
+    </div>
+    <div class="stats" id="stats"></div>
+  </section>
+
+  <div id="newsList" aria-live="polite"></div>
+
+  <div id="emptyState" class="empty hidden">
+    <div class="empty-icon">📭</div>
+    <p>暂无新闻数据</p>
+    <p class="empty-hint">代码推送到 GitHub 后，GitHub Actions 会自动抓取生成；也可以在 Actions 页面手动触发更新。</p>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>数据来源：Google News RSS · Bing News RSS · ESG Today · ESG News · ESG Dive · ESG Clarity</p>
+    <p>由 GitHub Actions 每日 08:00 / 20:00（北京时间）自动抓取并发布 · 分类为关键词自动判定，仅供参考 · 点击标题跳转至原始媒体</p>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
