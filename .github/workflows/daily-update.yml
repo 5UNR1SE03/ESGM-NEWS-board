@@ -1,0 +1,44 @@
+name: ESG 新闻每日更新
+
+on:
+  schedule:
+    # UTC 00:00 和 12:00 = 北京时间 08:00 和 20:00，每天更新两次
+    - cron: "0 0,12 * * *"
+  workflow_dispatch:          # 支持在 Actions 页面手动触发
+  push:
+    branches: [main]          # 提交到 main 时自动更新一次
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 抓取 ESG 新闻
+        run: python fetcher/fetch_news.py
+      - name: 配置 GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: 上传网站产物
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - name: 部署到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
